@@ -1,0 +1,64 @@
+html, body, #wrapper { margin: 0; padding: 0; width: 100%; height: 100%; font: 12px arial; }
+
+ul { list-style-type: none; margin: 0; padding: 0; }
+
+li { display: inline; margin-right: 20px; }
+
+#wrapper #nav { float: right; margin-top: 20px; }
+
+#wrapper #nav a { font-size: 13px; }
+
+#wrapper #nav .nav_fy { color: #f23f40; font-weight: 700; }
+
+#wrapper #nav .nav_fy::after { position: absolute; content: ' '; width: 6px; height: 6px; background-color: #f23f40; border-radius: 50%; }
+
+#wrapper #nav .mnav { color: #333; font-weight: 700; }
+
+#wrapper #nav .mnav:hover { color: #3385ff; }
+
+#wrapper #nav .nav_login, #wrapper #nav .nav_setting { color: #333; }
+
+#wrapper #nav .nav_login:hover, #wrapper #nav .nav_setting:hover { color: #3385ff; }
+
+#wrapper #nav .nav_more { color: white; background-color: #3385ff; text-decoration: none; padding: 5px; }
+
+#wrapper #header { min-height: 293px; height: 38.2%; width: 100%; }
+
+#wrapper #header .search-form { width: 642px; height: 100%; margin: 0 auto; }
+
+#wrapper #header .search-form .search-form_image { z-index: 0; position: relative; height: 61.8%; min-height: 181px; text-align: center; }
+
+#wrapper #header .search-form .search-form_image .search-form_baidu { position: absolute; text-align: center; left: 186px; bottom: 10px; width: 270px; height: 129px; background: url("../image/css_sprites.png") -10px -10px; }
+
+#wrapper #header .search-form #search-form_input { height: 34px; }
+
+#wrapper #header .search-form .search-form_text { z-index: 1; float: left; display: block; width: 539px; height: 34px; border: 1px solid #b8b8b8; }
+
+#wrapper #header .search-form .search-form_text #search-form_inpt { border: 0; width: 500px; height: 22px; font-size: 16px; line-height: 22px; margin: 6px 0 0 7px; padding: 0; outline: 0; }
+
+#wrapper #header .search-form #search-form_btn { float: left; width: 100px; height: 36px; background-color: #3385ff; color: white; border: 0px; cursor: pointer; font-size: 15px; letter-spacing: 1px; }
+
+#wrapper #header #search-form_suggestions { position: relative; top: 2px; z-index: 2; width: 539px; border: 1px solid #b8b8b8; border-top: 0; background-color: white; display: none; }
+
+#wrapper #header #search-form_suggestions li { font-size: 14px; height: 20px; line-height: 20px; padding: 3px 7px; display: block; cursor: pointer; }
+
+#wrapper #header #search-form_suggestions li:hover { background-color: #f8f8f8; }
+
+#wrapper #container { position: absolute; width: 100%; bottom: 132px; height: 163px; text-align: center; z-index: 1; }
+
+#wrapper #container .container_erweima { margin: 0 auto; width: 106px; height: 106px; background: url("../image/css_sprites.png") -10px -159px; }
+
+#wrapper #container .title { letter-spacing: 3px; line-height: 200%; text-align: center; }
+
+#wrapper #container .sub_title { color: #999; font-size: 14px; font-weight: 300; }
+
+#wrapper #footer { position: absolute; bottom: 0; height: 40px; width: 100%; background-color: #fafafa; color: #999; }
+
+#wrapper #footer .footer_left { float: left; margin-left: 20px; position: relative; top: 50%; margin-top: -12px; }
+
+#wrapper #footer .footer_left a { color: #999; text-decoration: none; }
+
+#wrapper #footer .footer_left a:hover { color: #333; }
+
+#wrapper #footer .footer_right { position: relative; top: 50%; margin-top: -12px; float: right; color: #bbb; }
+/*# sourceMappingURL=css.min.css.map */

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/css.min.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <script type="text/javascript" src="./jquery/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $("#search-form_inpt").on('click',function(){
+                $(".search-form_text").css({"border":"1px solid #3385ff"})
+            });
+            $("#search-form_inpt").on('keyup',function(){
+                var text1=$("#search-form_inpt").val()
+                var _url='https://www.baidu.com/sugrec?pre=1&p=3&ie=utf-8&json=1&prod=pc&from=pc_web&sugsid=1461,31170,21116,31187,31218,30823,26350,31163&wd='+text1+'dd&req=2&csor=2&pwd=d&cb=jQuery1102021806657851698596_1586580053529&_=1586580053532'
+                $.ajax({
+                    url:_url,
+                    type:'GET',
+                    dataType:'jsonp',
+                    jsonpCallback:'jQuery1102021806657851698596_1586580053529',
+                    success:function(data){
+                        var datas=data.g
+                        var lis=lisFunction()
+                        function lisFunction(){
+                            var result='';
+                            for(var i=0;i<datas.length;i++){
+                                result+='<li>'+datas[i].q+'</li>'
+                            }  
+                            return result; 
+                        }
+                        
+                        $('#search-form_ul').html(lis)
+
+                        $('#search-form_suggestions').show()
+                    }
+                })
+            });
+            $("#search-form_ul").on('click','li',function(){
+                var text=$(this).html();
+                window.location.href='https://www.baidu.com/s?wd='+text;
+            });
+            $("#search-form_btn").click(function(){
+                var text=$("#search-form_inpt").val()
+                if(text){
+                    window.location.href='https://www.baidu.com/s?wd='+text;
+                }
+            });
+        });
+        $(document).click(function(){
+            $('#search-form_suggestions').hide()
+                
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="nav">
+            <ul>
+                <li><a href="#" class="nav_fy">抗击肺炎</a></li>
+                <li><a href="#" class="mnav">新闻</a></li>
+                <li><a href="#" class="mnav">hao123</a></li>
+                <li><a href="#" class="mnav">地图</a></li>
+                <li><a href="#" class="mnav">视频</a></li>
+                <li><a href="#" class="mnav">贴吧</a></li>
+                <li><a href="#" class="mnav">学术</a></li>
+                <li><a href="#" class="nav_login">登录</a></li>
+                <li><a href="#" class="nav_setting">设置</a></li>
+                <li><a href="#" class="nav_more">更多产品</a></li>
+            </ul>
+        </div>
+        <div id="header">
+            <div class="search-form">
+                <div class="search-form_image">
+                    <div class="search-form_baidu"></div>
+                </div>
+                <form  id="search-form_input" autocomplete="off">
+                    <span class="search-form_text">
+                        <input type="text" id="search-form_inpt">
+                        <span class="camera">&#xe60d;</span>
+                    </span>
+                    <button id="search-form_btn" type="button">百度一下</button>
+                </form>
+                <div id="search-form_suggestions">
+                    <ul id="search-form_ul">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div class="container_image">
+                <div class="container_erweima"></div>
+            </div>
+            <div class="container_text">
+                <p class="title">下载百度APP</p>
+                <p class="sub_title">有事搜一搜&nbsp;没事看一看</p>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer_left">
+                <ul>
+                    <li><a href="#">设为首页</a></li>
+                    <li><a href="#">关于百度</a></li>
+                    <li><a href="#">About Baidu</a></li>
+                    <li><a href="#">百度推广</a></li>
+                    <li><a href="#">使用百度前必读</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                </ul>
+            </div>
+            <div class="footer_right">
+                <ul>
+                    <li>&#169;2020&nbsp;Baidu</li>
+                    <li>(京)-经营性-2017-0020</li>
+                    <li>京公网安备11000002000001号</li>
+                    <li>京ICP证030173号</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

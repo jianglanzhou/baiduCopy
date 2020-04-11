@@ -1,0 +1,189 @@
+$font-color:#999;
+$primary-font-color:#333;
+$primary-color:#3385ff;
+html,body,#wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:100%;
+    font:12px arial;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    display:inline;
+    margin-right: 20px;
+}
+#wrapper{
+    #nav{
+        float: right;
+        margin-top: 20px;
+        a{
+            font-size: 13px;
+        }
+        .nav_fy{
+            color: #f23f40;
+            font-weight: 700;
+            &::after{
+                position: absolute;
+                content: ' ';
+                width: 6px;
+                height: 6px;
+                background-color: #f23f40;
+                border-radius: 50%;
+            }
+        }
+        .mnav{
+            color: $primary-font-color;
+            font-weight: 700;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        .nav_login,.nav_setting{
+            color: $primary-font-color;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        .nav_more{
+            color: white;
+            background-color: $primary-color;
+            text-decoration: none;
+            padding: 5px;
+        }
+    }
+    #header{
+        min-height: 293px;
+        height: 38.2%;
+        width: 100%;
+        .search-form{
+            width: 642px;
+            height: 100%;
+            margin: 0 auto;
+            .search-form_image{
+                z-index: 0;
+                position: relative;
+                height: 61.8%;
+                min-height: 181px;
+                text-align: center;
+                .search-form_baidu{
+                    position: absolute;
+                    text-align: center;
+                    left: 186px;
+                    bottom: 10px;
+                    width: 270px; height: 129px;
+                    background: url('../image/css_sprites.png') -10px -10px;
+                }
+            }
+            #search-form_input{
+                height: 34px;
+            }
+            .search-form_text{
+                z-index: 1;
+                float: left;
+                display: block;
+                width: 539px;
+                height: 34px;
+                border: 1px solid #b8b8b8;
+                #search-form_inpt{
+                    border:0;
+                    width: 500px;
+                    height: 22px;
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 6px 0 0 7px;
+                    padding: 0;
+                    outline: 0;
+                }
+            }
+            #search-form_btn{
+                float: left;
+                width: 100px;
+                height: 36px;
+                background-color: #3385ff;
+                color: white;
+                border: 0px;
+                cursor: pointer;
+                font-size: 15px;
+                letter-spacing: 1px;
+            }
+        }
+        #search-form_suggestions{
+            position: relative;
+            top:2px;
+            z-index: 2;
+            width: 539px;
+            border:1px solid #b8b8b8;
+            border-top: 0;
+            background-color: white;
+            display: none;
+            li{
+                font-size: 14px;
+                height: 20px;
+                line-height: 20px;
+                padding: 3px 7px;
+                display: block;
+                cursor: pointer;
+                &:hover{
+                    background-color: #f8f8f8;
+                }
+            }
+        }
+    }
+    #container{
+        position: absolute;
+        width: 100%;
+        bottom: 132px;
+        height: 163px;
+        text-align: center; 
+        z-index: 1;
+            .container_erweima{
+                margin: 0 auto;
+                width: 106px; height: 106px;
+                background: url('../image/css_sprites.png') -10px -159px;
+            }
+            .title{
+                letter-spacing: 3px;
+                line-height: 200%;
+                text-align: center;
+            }
+            .sub_title{
+                color: #999;
+                font-size: 14px;
+                font-weight: 300;
+            }
+    }
+    #footer{
+        position: absolute;
+        bottom: 0;
+        height: 40px;
+        width: 100%;
+        background-color: #fafafa;
+        color: $font-color;
+        .footer_left{
+            float: left;
+            margin-left: 20px;
+            position: relative;
+            top: 50%;
+            margin-top: -12px;
+            a{
+                color: $font-color;
+                text-decoration: none;
+                &:hover{
+                    color: $primary-font-color;
+                }
+            }
+        }
+        .footer_right{
+            position: relative;
+            top: 50%;
+            margin-top: -12px;
+            float: right;
+            color: #bbb;
+        }
+    }
+}
