@@ -48,9 +48,9 @@ li { display: inline; margin-right: 20px; }
 
 #wrapper #container .container_erweima { margin: 0 auto; width: 106px; height: 106px; background: url("../image/css_sprites.png") -10px -159px; }
 
-#wrapper #container .title { letter-spacing: 3px; line-height: 200%; text-align: center; }
+#wrapper #container .title { font-size: 16px; letter-spacing: 3px; line-height: 32px; text-align: center; margin: 0; }
 
-#wrapper #container .sub_title { color: #999; font-size: 14px; font-weight: 300; }
+#wrapper #container .sub_title { color: #999; font-size: 14px; font-weight: 300; margin: 0; }
 
 #wrapper #footer { position: absolute; bottom: 0; height: 40px; width: 100%; background-color: #fafafa; color: #999; }
 
